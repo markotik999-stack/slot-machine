@@ -2,19 +2,19 @@ import random
 import time
 symbols = ['🍒', '🍋', '🍇']
 balance = 100
-print('Добро пожаловать в деп машинку!🎰')
+print('Welcome to slot machine!🎰')
 while balance > 0:
-    print(f'Ваш баланс равен {balance} тенге')
+    print(f'Your balance is {balance} dollars')
     sym1 = symbols[random.randint(0, len(symbols)-1)]
     sym2 = symbols[random.randint(0, len(symbols)-1)]
     sym3 = symbols[random.randint(0, len(symbols)-1)]
-    bet = input('Ваша ставка? ')
+    bet = input('Your bet? ')
     if int(bet) > balance:
-        print('у тебя столько нет, дебил')
+        print('You don\'t have that much money, idiot')
         print('--------------------------')
         continue
     if bet == '67':
-        print('СИКС СЕВЕН!!!')
+        print('SIX SEVEN!!!')
         time.sleep(0.5)
     if str(bet).isdigit():
         print(sym1, end = ' ')
@@ -26,7 +26,7 @@ while balance > 0:
         print('\n','-------------------------')
         balance -= int(bet)
         if sym1 == sym2 and sym1 == sym3:
-            print('ДЖЕКПОТ🤩')
-            print('баланс увеличен на ставку')
+            print('JACKPOT🤩')
+            print('balance increased by bet')
             balance += int(bet) * 2
-print('денег нет, ты теперь бомж💀')
+print('no money left, you are now a begagar💀')
