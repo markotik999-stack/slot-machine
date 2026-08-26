@@ -2,6 +2,7 @@ import random
 import time
 symbols = ['🍒', '🍋', '🍇']
 balance = 100
+ans = 0
 print('Welcome to slot machine!🎰')
 while balance > 0:
     print(f'Your balance is {balance} dollars')
@@ -29,4 +30,9 @@ while balance > 0:
             print('JACKPOT🤩')
             print('balance increased by bet')
             balance += int(bet) * 2
-print('no money left, you are now a begagar💀')
+        if balance == 0:
+            print('no money left, you are now a beggar💀')
+            print('by how much do you want to increase your balance?')
+            ans = int(input())
+            balance += ans
+            print('\n','-------------------------')
