@@ -31,9 +31,7 @@ while balance > 0:
         print(sym3)
         time.sleep(1)
         
-        if sym1 == sym2 and sym1 != sym3:
-            print('Almost😭')
-            story.append(f'You almost won {sym1} {sym2} {sym3}')
+    
         
         print('-------------------------')
         balance -= int(bet)
